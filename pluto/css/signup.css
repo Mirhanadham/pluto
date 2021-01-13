@@ -1,0 +1,69 @@
+
+
+body{
+	background-color: #202630;
+}
+.navbar
+{
+	 background-image: linear-gradient(to right, rgb(52,197,208), rgb(78,209,183));
+}
+.login-panel
+{
+
+
+	margin-right: 20%;
+	margin-left: 20%;
+	width:60%;
+	height: 500px;
+	margin-top:2% ;
+	background-color: #2f363f;
+	color:white;
+}
+.form-group
+{
+	border-color: #1c2833;
+	align-content: center;
+	margin-left: 15%;
+	width: 95%;
+
+}
+.right
+{
+	margin-right: 10%;
+}
+.submit
+{
+	align-content: center;
+	margin-left: 20%;
+	margin-top:2% ;
+	text-align: center;
+}
+
+.sign
+{
+
+	margin-left: 5px;
+	background-color: #2f363f;
+}
+.Register
+{
+	background-image: linear-gradient(to right, rgb(52,197,208), rgb(78,209,183));
+	margin-left: 90%;
+}
+.welcome
+{
+	text-align:  center;
+	font-size: 350%;
+	font-family: "Chaparral Pro Light";
+	margin-top: 7%;
+	margin-bottom: 3%;
+}
+.btn-block
+{
+	margin-left: 15%;
+	margin-top: 17%;
+	margin-bottom: 5%;
+	width: 70%;
+	background-image: linear-gradient(to right, rgb(52,197,208), rgb(78,209,183));
+
+}
