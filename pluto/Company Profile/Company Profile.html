@@ -1,0 +1,331 @@
+<!DOCTYPE html>
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Company Profile</title>
+	<link rel="stylesheet" href="D:\College 4th Year\First Semester\Software Engineering for Web\Project\Company Profile\CompnayProfile.css">
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+	<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+	<style type="text/css">
+		body{
+			background-color: #202630;
+		}
+		h2{
+			font-size: 130%;
+			font-family: Arial;
+			color: #4ed1b7; 
+			margin-top: 5px;
+		}
+	</style>
+</head>
+<body onload="loadData()">
+	<div class="taskbar">
+		<nav class="navbar navbar-expand-lg navbar-light bg-light">
+		  <!-- Just an image -->
+		  <a class="navbar-brand" href="#">
+		    <img src="D:\College 4th Year\First Semester\Software Engineering for Web\Project\Company Profile\logo.png" width="50" height="37" alt="">
+		  </a>
+		  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+		    <span class="navbar-toggler-icon"></span>
+		  </button>
+
+		  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+		    <ul class="navbar-nav mr-auto">
+		      
+		    </ul>
+		    <form class="form-inline my-2 my-lg-0">
+		      <button class="btn btn-outline my-2 my-sm-0 sign text-light"  type="submit" id="home">Home</button>
+		      <button class="btn  my-2 my-sm-0 sign text-light" type="submit" id="logout">Logout</button>
+		    </form>
+		  </div>
+		</nav>
+    </div>
+	<div class="container-fluid" id="company-info">
+		<div class="row" id="company-info-row">
+			<div class="col">
+				<img class="rounded-circle" id="company-profile-img" src="D:\College 4th Year\First Semester\Software Engineering for Web\Project\Company Profile\profile.png">
+				<h3 class="company-name">Company Profile</h3>
+			</div>
+			<div class ="col col-lg-2" id="company-followers-num">
+				<p>Followers</p>
+				<p>200</p>
+				</div>
+			<div class="col col-lg-2" id="company-posts-num">
+				<p>Posts</p>
+				<p>200</p>
+			</div>
+		</div>
+	</div>
+	<div class="container-fluid" id="content-container">
+		<div class="row" id="content-row">
+			<div class="col">
+				<div class="container" id="likee-list-container" >
+					<h2 id="likee-list-h">People Who Like The Page</h2>
+					<div class="list-group" id="likee-list">
+						<div class="list-group-item" id="likee-item">
+							<div class="row">
+								<div class="col">
+									<img class="rounded-circle"  src="D:\College 4th Year\First Semester\Software Engineering for Web\Project\Company Profile\profile.png" id="likee-pic">
+								</div>
+								<div class="col">
+									<p id="likee-name">name</p>
+								</div>
+							</div>
+						</div>
+						<div class="list-group-item" id="likee-item">
+							<div class="row">
+								<div class="col">
+									<img class="rounded-circle"  src="D:\College 4th Year\First Semester\Software Engineering for Web\Project\Company Profile\profile.png" id="likee-pic">
+								</div>
+								<div class="col">
+									<p id="likee-name">name</p>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="col-6" id="posts-col">
+				<div class="container" id="posts-container">
+					<h2 id="posts-h">Posts</h2>
+					<div class="list-group" id="post-list">
+						<div class="list-group-item post" id="post">
+							</br>
+							<textarea class="postTxt" name="postTxt"></textarea>  
+							</br>
+							    <a class="clicks" id="clicks" style="color: white">0</a>
+						        <button type="button" class="like" name="like" id="likeBtn" onClick="like()">Like</button>
+						        <button type="button" class="comment" name="comment" id="commentBtn" onClick="comment()">Comment</button> 
+						        <button type="button" class="startchat" name="startchat" id="chatBtn" onClick="showForm()"> Start chat </button> </br> </br>
+						        <input type="text" id ="commentWrite" class="commentWrite">
+						        <button type="button" class="doneBtn" id="doneBtn" onClick="postComment()">Done</button>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="col">
+				<div class="container" id="staff-list-container" >
+					<h2 id="staff-list-h">Staff</h2>
+					<div class="list-group" id="staff-list">
+						<div class="list-group-item" id="staff-item">
+							<div class="row">
+								<div class="col">
+									<img mg class="rounded-circle" width="75px" length = "75px" src="D:\College 4th Year\First Semester\Software Engineering for Web\Project\Company Profile\profile.png" id="staff-pic">
+								</div>
+								<div class="col">
+									<p id="staff-name">name</p>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	
+	<!-- <div class="container" id="likee-list-container">
+		<h2 id="likee-list-h">People Who Like The Page</h2>
+		<div class="list-group">
+			<div class="list-group-item">
+				<div class="row">
+					<div class="col-lg-2">
+						<img src="" id="likee-pic">
+					</div>
+					<div class="col">
+						<p id="likee-name">name</p>
+					</div>
+				</div>
+			</div>
+			<div class="list-group-item">
+				<div class="row">
+					<div class="col-lg-2">
+						<img src="" id="likee-pic">
+					</div>
+					<div class="col">
+						<p id="likee-name">name</p>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<div class="container" id="staff-list-container">
+		<h2 id="staff-list-h">Staff</h2>
+		<div class="list-group" id="staff-list">
+			<div class="list-group-item">
+				<div class="row">
+					<div class="col-lg-2">
+						<img src="" id="staff-pic">
+					</div>
+					<div class="col">
+						<p id="staff-name">name</p>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div> -->
+	
+
+<script type="text/javascript">
+
+		function loadData(){
+			alert("I am in load likes function");
+			for (var i = 0;i<5;i++) {
+				var likeeItem = document.createElement("div");
+				likeeItem.setAttribute("id","likee-item");
+				likeeItem.setAttribute("class","list-group-item");
+				var row = document.createElement("div");
+				row.setAttribute("class","row");
+				var col1 = document.createElement("div");
+				col1.setAttribute("class","col");
+				var img = document.createElement("img");
+				img.setAttribute("class","rounded-circle");
+				img.setAttribute("id","likee-pic");
+				img.setAttribute("src","D:\\College 4th Year\\First Semester\\Software Engineering for Web\\Project\\Company Profile\\profile.png");
+				col1.appendChild(img);
+				var col2 = document.createElement("div");
+				col2.setAttribute("class","col");
+				var p = document.createElement("p");
+				p.setAttribute("id","likee-name");
+				var name =document.createTextNode("name");
+				p.appendChild(name);
+				col2.appendChild(p);
+				row.appendChild(col1);
+				row.appendChild(col2);
+				likeeItem.appendChild(row);
+				document.getElementById("likee-list").appendChild(likeeItem);
+			}
+			for(var j=0;j<6;j++){
+				var likeeItem = document.createElement("div");
+				likeeItem.setAttribute("id","staff-item");
+				likeeItem.setAttribute("class","list-group-item");
+				var row = document.createElement("div");
+				row.setAttribute("class","row");
+				var col1 = document.createElement("div");
+				col1.setAttribute("class","col");
+				var img = document.createElement("img");
+				img.setAttribute("class","rounded-circle");
+				img.setAttribute("id","staff-pic");
+				img.setAttribute("src","D:\\College 4th Year\\First Semester\\Software Engineering for Web\\Project\\Company Profile\\profile.png");
+				col1.appendChild(img);
+				var col2 = document.createElement("div");
+				col2.setAttribute("class","col");
+				var p = document.createElement("p");
+				p.setAttribute("id","staff-name");
+				var name =document.createTextNode("name");
+				p.appendChild(name);
+				col2.appendChild(p);
+				row.appendChild(col1);
+				row.appendChild(col2);
+				likeeItem.appendChild(row);
+				document.getElementById("staff-list").appendChild(likeeItem);
+			}
+			for(var k=0;k<6;k++){
+				var post = document.createElement("div");
+				post.setAttribute("id","post");
+				post.setAttribute("class","list-group-item post");
+				var bre = document.createElement("br");
+
+				var textA = document.createElement("textarea");
+				textA.setAttribute("class","postTxt");
+				textA.setAttribute("name","postTxt");
+
+				var a = document.createElement("a");
+				a.setAttribute("class","clicks");
+				a.setAttribute("id","clicks");
+				a.setAttribute("style","color: white");
+				var value = document.createTextNode("0");
+				a.appendChild(value);
+
+				var likebtn = document.createElement("button");
+				likebtn.setAttribute("type","button");
+				likebtn.setAttribute("class","like");
+				likebtn.setAttribute("name","like");
+				likebtn.setAttribute("onClick","like()");
+				var likeBtnV = document.createTextNode("Like");
+				likebtn.appendChild(likeBtnV);
+
+				var commentbtn = document.createElement("button");
+				commentbtn.setAttribute("type","button");
+				commentbtn.setAttribute("class","comment");
+				commentbtn.setAttribute("name","comment");
+				commentbtn.setAttribute("onClick","comment()");
+				var commentBtnV = document.createTextNode("Comment");
+				commentbtn.appendChild(commentBtnV);
+
+				var chatbtn = document.createElement("button");
+				chatbtn.setAttribute("type","button");
+				chatbtn.setAttribute("class","startchat");
+				chatbtn.setAttribute("name","startchat");
+				chatbtn.setAttribute("onClick","showForm()");
+				var chatBtnV = document.createTextNode("Start Chat");
+				chatbtn.appendChild(chatBtnV);
+
+				var donebtn = document.createElement("button");
+				donebtn.setAttribute("type","button");
+				donebtn.setAttribute("class","doneBtn");
+				donebtn.setAttribute("name","doneBtn");
+				donebtn.setAttribute("onClick","postComment()");
+				var doneBtnV = document.createTextNode("Done");
+				donebtn.appendChild(doneBtnV);
+
+				var input = document.createElement("input");
+				input.setAttribute("type","text");
+				input.setAttribute("class","commentWrite");
+				input.setAttribute("id","commentWrite");
+
+				post.appendChild(bre);
+			    post.appendChild(textA);
+				post.appendChild(bre);
+				post.appendChild(a);
+				post.appendChild(likebtn);
+				post.appendChild(commentbtn);
+				post.appendChild(chatbtn);
+				post.appendChild(bre);
+				post.appendChild(bre);
+				post.appendChild(input);
+				post.appendChild(donebtn); 
+
+				document.getElementById("post-list").appendChild(post);
+
+		    }
+
+		};
+	
+
+	    var clicks = 0;
+	    	function showForm() {
+			document.getElementById("myForm").style.visibility="visible";
+		};
+		function closeForm() {
+	  		document.getElementById("myForm").style.visibility = "hidden";
+
+		};
+
+
+	    function like() {
+	        clicks += 1;
+	        document.getElementById("clicks").innerHTML = clicks;
+	    };
+
+	   
+	    function comment(){
+	    	document.getElementById("commentWrite").style.visibility="visible";
+	    	document.getElementById("doneBtn").style.visibility="visible";
+
+	    };
+	    function postComment(){
+			var para = document.createElement("p");
+			var node = document.createTextNode(document.getElementById("commentWrite").value);
+			para.appendChild(node);
+			para.style.color="white";
+			var element = document.getElementById("post");
+			element.appendChild(para);
+
+	    };
+    </script>
+
+</body>
+</html>
