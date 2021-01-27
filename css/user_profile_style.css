@@ -1,0 +1,272 @@
+/*navbar css*/
+
+body{
+	background:#202630;
+}
+
+.navbar
+{
+	 background-image: linear-gradient(to right, rgb(52,197,208), rgb(78,209,183));
+}
+
+.sign
+{
+
+	margin-left: 5px;
+	background-color: #2f363f;
+}
+
+
+
+.post{
+		width: 100%;
+		text-align: center;
+}
+.postTxt{
+		width: 60%;
+		height:150px;
+}
+.commentWrite{
+		width: 50%;
+		border: solid;
+		visibility: hidden;
+}
+.doneBtn{
+		border: none;
+		background: rgb(52,197,208);
+		color: #2f363f;
+		width: 10%;
+		visibility: hidden;
+}
+.chat-popup{
+	visibility: hidden;
+	float: right;
+	border: none;
+	border-color: rgb(213,216,220);
+margin-top:150px;
+}
+
+.form-container {
+  border: none;
+  background-color: #2f363f;
+  max-width: 300px;
+  padding: 10px;
+}
+
+.form-container textarea {
+  width: 100%;
+  padding: 15px;
+  margin: 5px 0 22px 0;
+  border: none;
+  background: white;
+  resize: none;
+  min-height: 200px;
+}
+.msg{
+ height: 30px;
+ width: 100%;
+}
+
+.form-container .btn {
+	border: none;
+	background: rgb(52,197,208);
+	color: #2f363f;
+  padding: 5px 5px;
+  border: none;
+  cursor: pointer;
+  width: 49%;
+  margin-bottom:5px;
+  opacity: 0.8;
+}
+
+.form-container .cancel {
+	border: none;
+	background: rgb(52,197,208);
+	color: #2f363f;
+}
+
+.form-container .btn:hover, .open-button:hover {
+  opacity: 1;
+
+}
+
+.form-container .cancel {
+	border: none;
+	background: rgb(52,197,208);
+	color: #2f363f;
+}
+
+.form-container .btn:hover, .open-button:hover {
+  opacity: 1;
+
+}
+.writePost{
+	width:90%;
+	height:70px;
+}
+.postBtn, .photoBtn{
+	border: none;
+	background: rgb(52,197,208);
+	color: #2f363f;
+	width: 30%;
+}
+.clicks{
+	font-color: white;
+}
+.like{
+	border: none;
+	background: rgb(52,197,208);
+	color: #2f363f;
+}
+.startchat{
+	border: none;
+	background: rgb(52,197,208);
+	color: #2f363f;
+}
+.comment{
+    border: none;
+	background: rgb(52,197,208);
+	color: #2f363f;
+}
+.post{
+		width: 100%;
+		text-align: center;
+}
+.postTxt{
+		width: 60%;
+		height:150px;
+}
+.commentWrite{
+		width: 50%;
+		border: solid;
+		visibility: hidden;
+}
+.doneBtn{
+		border: none;
+		background: rgb(52,197,208);
+		color: #2f363f;
+		width: 10%;
+		visibility: hidden;
+}
+
+
+
+
+
+
+.profile{
+	margin:20px 0;
+}
+
+.prof_pic img{
+	 display: block;
+     width: 50%;
+	 margin-left:auto;
+	 margin-right:auto;
+	 margin-top:20px;
+	
+}
+
+
+.user_Info{
+	
+	margin-top:50px; 
+	text-align:center;
+	
+	
+	
+}
+
+
+.user_name{
+	color: #5a7391;
+    font-size: 16px;
+    font-weight: 600;
+    margin-bottom: 7px;
+}
+
+
+.user_job{
+	  text-transform: uppercase;
+	  color: #5b9bd1;
+	  font-size: 12px;
+	  font-weight: 600;
+	  margin-bottom: 15px;
+}
+
+
+.buttons{
+	 text-align: center;
+     margin-top: 10px;
+	 
+}
+
+.buttons .btn{
+	text-transform: uppercase;
+    font-size: 11px;
+    font-weight: 600;
+    padding: 6px 15px;
+    margin-right: 5px;
+	
+}
+
+.buttons .btn:last-child{
+	margin-right: 0px;
+	
+}
+
+.user_menu{
+	margin-top:30px;
+	
+}
+
+/*.user_menu ul li{
+	border-bottom : 1px solid #f0f4f7;
+	
+}*/
+
+
+/*.user_menu ul li a{
+	 color: #93a3b5;
+     font-size: 14px;
+     font-weight: 400;
+	 border-left: 1px solid transparent;
+	
+}*/
+
+
+
+/*.user_menu ul li a:hover{
+	 background-color: #fafcfd;
+     color: #5b9bd1;
+	 border-left: 2px solid  #5b9bd1;
+	
+}
+*/
+
+
+.profile_content{
+	
+	background: #202630;
+	margin-top:  300px;
+	
+}
+
+#Infoparagh{
+	
+	color:#5b9bd1;
+	display:none;
+}
+#Bioparagh{
+	border:2px black solid;
+	background: #fff;
+	color:#5b9bd1;
+	display:none;
+}
+
+#Skillsparagh{
+	color:#5b9bd1;
+	background: #fff;
+	display:none;
+	
+}

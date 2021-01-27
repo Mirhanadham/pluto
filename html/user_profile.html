@@ -1,0 +1,159 @@
+<html lang="en">
+	<head>
+		<title>Your Profile</title>
+		<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+		<script type="text/javascript">		
+				$(document).ready(function(){
+				
+					$("#wizard-picture").change(function(){
+						readURL(this);
+					});
+				});
+				function readURL(input) {
+					if (input.files && input.files[0]) {
+						var reader = new FileReader();
+
+						reader.onload = function (e) {
+							$('#wizardPicturePreview').attr('src', e.target.result).fadeIn('slow');
+						}
+						reader.readAsDataURL(input.files[0]);
+					}
+				}
+				
+				$("#info").on("click", showinfoFn);
+				function showinfoFn(){
+				(".profile_content ").replacewith("<div>YOUR Info </div>")
+				}
+
+
+
+		</script>
+		
+		<link rel="stylesheet" href="D:\College 4th Year\First Semester\Software Engineering for Web\Project\user_profile_style.css">
+		<style type="text/css">
+			
+		</style>
+		
+		
+</head>
+	<body>
+		<div class="taskbar">
+		<nav class="navbar navbar-expand-lg navbar-light bg-light">
+		  <!-- Just an image -->
+		  <a class="navbar-brand" href="#">
+		    <img src="D:\College 4th Year\First Semester\Software Engineering for Web\Project\Company Profile\logo.png" width="50" height="37" alt="">
+		  </a>
+		  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+		    <span class="navbar-toggler-icon"></span>
+		  </button>
+
+		  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+		    <ul class="navbar-nav mr-auto">
+		      
+		    </ul>
+		    <form class="form-inline my-2 my-lg-0">
+		      <a href="D:\College 4th Year\First Semester\Software Engineering for Web\Project\Homepage.html" class="btn my-2 my-sm-0 sign text-light"  role="button" id="Home">Home</button>
+		      <a href="D:\College 4th Year\First Semester\Software Engineering for Web\Project\Welcome.html"  class="btn  my-2 my-sm-0 sign text-light" role="button" id="Logout">Logout</a>
+		    </form>
+		  </div>
+		</nav>
+    </div>
+		<div class="container">
+			<div class=" profile">
+				<div class="col-md-3">
+					<div class="sidebar">
+						<div class="prof_pic">
+							 <img src="https://static.change.org/profile-img/default-user-profile.svg" alt="" class= "img-responsive img-circle" class="picture-src" id="wizardPicturePreview">
+							
+						</div>
+						
+						<div class="user_Info">
+							<div class="user_name">
+							   Hager Hany
+							</div>
+							<div class="user_job">
+								automation tester
+							</div>
+						</div>
+						
+						<div class="buttons">
+							<button class=" btn btn-success btn-sm" > follow </button>
+							<button class=" btn btn-danger btn-sm" > chat </button>
+							<button class="btn btn-warning btn-sm" data-toggle="modal" data-target="#myModal" > update </button>
+						</div>
+						<!-- Modal -->
+							  <div class="modal fade" id="myModal" role="dialog">
+								<div class="modal-dialog">
+								
+								  <!-- Modal content-->
+								  <div class="modal-content">
+									<div class="modal-header">
+									  <button type="button" class="close" data-dismiss="modal">&times;</button>
+									  <h4 class="modal-title">Edit your profile</h4>
+									</div>
+									<div class="modal-body">
+									  <label>Name</label> <input size="30" , placeholder="type your new user_name"></input> 
+									  <br>
+									  <br>
+	                                  <label>Password</label> <input size="30" , placeholder="type your new password"></input>
+									   <br>
+									  <br>
+									  <!--update pic-->
+									 <strong><i>Choose Picture </i></strong>
+
+									  <input type="file" id="wizard-picture" class="">
+									  
+									  
+									</div>
+									<div class="modal-footer">
+									  <button type="button" class="btn btn-default" data-dismiss="modal">Submit</button>
+									</div>
+								  </div>
+								  
+								</div>
+							  </div>
+						
+
+
+
+						<div class="user_menu">
+							<ul class="nav">
+								<li id="info">
+								<a href="#" >
+								<i class="glyphicon glyphicon-info-sign" > Info</i>
+								</a>
+								</li>
+								
+								<li>
+								<a href="#">
+								<i class="glyphicon glyphicon-pencil" > Bio</i>
+								</a>
+								</li>
+								
+								
+								<li >
+								<a href="#">
+								<i class="glyphicon glyphicon-ok-circle" > Skills</i>
+								</a>
+								</li>
+								
+								<li >
+								<a href="#">
+								<i class="glyphicon glyphicon-user" > Posts</i>
+								</a>
+								</li>
+							</ul>
+						</div>	
+					</div>
+					</div>
+					<div class="col-md-9">
+						<div class="profile_content">
+							<P>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla leo tellus, mollis ac egestas vel, elementum quis libero. Pellentesque vulputate dignissim efficitur. Proin semper ultricies velit, non tincidunt dui suscipit at. Sed ligula sem, mattis non ex vel, vehicula gravida justo. Pellentesque quis sapien in quam rhoncus imperdiet ut sed lectus. Maecenas iaculis fringilla velit eget mattis. In pellentesque purus eget ipsum dictum malesuada. Cras hendrerit sem vitae velit vulputate, vel vehicula velit accumsan.</p>
+						</div>
+				</div>
+			</div>
+		</div>
+ </body>
+</html>
