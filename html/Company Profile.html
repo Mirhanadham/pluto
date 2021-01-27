@@ -20,7 +20,7 @@
 		}
 	</style>
 </head>
-<body onLoad=getStaffList()>
+<body onload="getStaffList()">
 	<div class="taskbar">
 		<nav class="navbar navbar-expand-lg navbar-light bg-light">
 		  <!-- Just an image -->
@@ -147,7 +147,7 @@
 									  
 									</div>
 									<div class="modal-footer">
-									  <button type="button" class="btn btn-default" data-dismiss="modal" id="submit-new-satff" onClick="addStaff()">Submit</button>
+									  <button type="button" class="btn btn-default"  id="submit-new-satff" onclick="addStaff()" >Submit</button>
 									</div>
 								  </div>
 								  
@@ -237,34 +237,48 @@
 	    function addStaff(){
 	    	var name = document.getElementById("staff-name-input").value;
 	    	var image = document.getElementById("wizard-picture").value;
-	    	alert(image);
+	    	var filePath=$('#wizard-picture').val();
+			var filename = filePath.match(/[^\\/]*$/)[0];
+			var func="test";
+			$.ajax({
+	            
+	            method: "post",
+	            url: "CompnayProfile.php?action=test",
+	            data: {function:func, paragraph:name , file:filename}
+	    	
+	   		 })
+			
 	    };
 	    function getStaffList(){
 	    	var staffListFromDB= "hanem:www.sdj.com , mirhan:www.riwuef.com , menna:www.urbjge.com";
-	    	var stafList = staffListFromDB.split(",");
+	    	var staffList = staffListFromDB.split(",");
 	    	var counter=0;
 	    	for(var i=0;i<staffList.length;i++){
 	    		counter++;
 	    	}
 	    	alert(counter);
-
 	    }
     </script>
     <script type="text/javascript">
     	$(document).ready(function(){
+
 
     		//add people who liked
     		for(var i=0;i<6;i++){
     			var person = "<div class='list-group-item' id='likee-item'>";
     			person = person + "<div class='row'>";
     			person = person + "<div class='col'>";
-    			person = person + "<img mg class='rounded-circle' width='75px' length = '75px' src='..\\images\\profile.png' id='likee-pic'>";
+    			var bla = "name:..\\images\\profile.png";
+    			var blaList = bla.split(':');
+    			var srcOfImg = blaList[1];
+    			person = person + "<img class='rounded-circle' width='75px' length = '75px' src ='"+srcOfImg +"' id='likee-pic'>";
     			person = person + "</div>";
     			person = person + "<div class='col'>";
-    			person = person + "<p id='likee-name'>"+"name"+"</p>";
+    			person = person + "<p id='likee-name'>"+blaList[0]+"</p>";
     			person = person + "</div>";
     			person = person + "</div>";
     			person = person + "</div>";
+
     			$("#likee-list").append(person);
     		}
 
@@ -274,7 +288,10 @@
     			var staff = "<div class='list-group-item' id='staff-item'>";
     			staff = staff + "<div class='row'>";
     			staff = staff + "<div class='col'>";
-    			staff = staff + "<img mg class='rounded-circle' width='75px' length = '75px' src='..\\images\\profile.png' id='staff-pic'>";
+    			var bla = "name:..\\images\\profile.png";
+    			var blaList = bla.split(':');
+    			var srcOfImg = blaList[1];
+    			staff = staff + "<img mg class='rounded-circle' width='75px' length = '75px' src='"+ srcOfImg +"' id='staff-pic'>";
     			staff = staff + "</div>";
     			staff = staff + "<div class='col'>";
     			staff = staff + "<p id='staff-name'>"+"name"+"</p>";
@@ -299,6 +316,7 @@
 
     			$("#post-list").append(post);
     		}
+    		
 
     	})
     </script>
