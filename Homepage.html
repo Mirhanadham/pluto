@@ -1,0 +1,342 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<style type="text/css">
+.body{
+	background-color: #202630;
+	
+}
+img{
+
+border-radius: 50%;
+}
+.col-md-3{
+background-color: #2f363f; 
+border: none;
+border-color: rgb(213,216,220);
+
+}
+.col-md-9{
+background-color: #2f363f; 
+border: none;
+border-color: rgb(213,216,220);
+min-height: 600px;
+border-left: solid;
+}
+.navbar{
+border: none;
+border-color: rgb(213,216,220);
+}
+.navbar-brand{
+position: absolute;
+left: 200px;
+}
+
+.postTitle{
+	color: white;
+	font-size: 35px
+}
+.fa-user-circle-o, .fa-edit, .fa-envelope-o{
+	color: white;
+}
+.form-control{
+position: absolute;
+right: 280px;
+}
+.btn-success-outline{
+border: none;
+background: rgb(52,197,208);
+color: #2f363f;
+position:relative; 
+right: 190px;
+}
+
+.chat-popup{
+	visibility: hidden;
+	float: right;
+	border: none;
+	border-color: rgb(213,216,220);
+}
+
+.form-container {
+  border: none;
+  background-color: #2f363f;
+  max-width: 300px;
+  padding: 10px;
+}
+
+.form-container textarea {
+  width: 100%;
+  padding: 15px;
+  margin: 5px 0 22px 0;
+  border: none;
+  background: white;
+  resize: none;
+  min-height: 200px;
+}
+.msg{
+ height: 30px;
+ width: 100%;
+}
+
+.form-container .btn {
+	border: none;
+	background: rgb(52,197,208);
+	color: #2f363f;
+  padding: 5px 5px;
+  border: none;
+  cursor: pointer;
+  width: 49%;
+  margin-bottom:5px;
+  opacity: 0.8;
+}
+
+.form-container .cancel {
+	border: none;
+	background: rgb(52,197,208);
+	color: #2f363f;
+}
+
+.form-container .btn:hover, .open-button:hover {
+  opacity: 1;
+
+}
+.postTxt{
+	background-color:#202630; 
+	border: none;
+}
+.writePost{
+	font-color: white;
+	background-color: #202630;
+	border: none;
+	width:90%;
+	height:70px;
+}
+
+.postBtn, .photoBtn{
+	border: none;
+	background: rgb(52,197,208);
+	color: #2f363f;
+	width: 30%;
+}
+.clicks{
+	font-color: white;
+}
+.like{
+	border: none;
+	background: rgb(52,197,208);
+	color: #2f363f;
+}
+.startchat{
+	border: none;
+	background: rgb(52,197,208);
+	color: #2f363f;
+}
+.comment{
+    border: none;
+	background: rgb(52,197,208);
+	color: #2f363f;
+}
+.post{
+		width: 100%;
+		text-align: center;
+}
+.postTxt{
+		width: 60%;
+		height:150px;
+}
+.commentWrite{
+		width: 50%;
+		border: solid;
+		visibility: hidden;
+}
+.doneBtn{
+		border: none;
+		background: rgb(52,197,208);
+		color: #2f363f;
+		width: 10%;
+		visibility: hidden;
+}
+.navbar
+{
+	 background-image: linear-gradient(to right, rgb(52,197,208), rgb(78,209,183));
+}
+
+.sign
+{
+
+	margin-left: 5px;
+	background-color: #2f363f;
+}
+.msg{
+	background-color: #202630;
+	border:none;
+}
+
+</style>
+<head>
+	<!-- Required meta tags -->
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	<title>Homepage</title>
+
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+
+</head>
+<body class="body">	
+	<div class="taskbar">
+		<nav class="navbar navbar-expand-lg navbar-light bg-light">
+		  <!-- Just an image -->
+		  <a class="navbar-brand" href="#">
+		    <img src="logo.png" width="50" height="37" alt=""> <label style="color: white">Pluto</label>
+		  </a>
+		  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+		    <span class="navbar-toggler-icon"></span>
+		  </button>
+
+		  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+		    <ul class="navbar-nav mr-auto">
+		      
+		    </ul>
+		    <form class="form-inline my-2 my-lg-0">
+		      <button class="btn btn-outline my-2 my-sm-0 sign text-light"  type="submit">Log out</button>
+		    </form>
+		  </div>
+		</nav>
+    </div>
+
+	</br>
+
+		<div class="container">
+		<div class="row">
+			
+			<div class="col-md-3">
+			</br>
+			<center> <img src="blank-profile-picture-973460_640.png" class="img-circle" alt="blank-profile-picture-973460_640" width=65%> 
+			</center>
+			</br>	
+				<center> <i class="fa fa-user-circle-o"></i> <a href="profile.html" style="color: white">view profile</a></center>
+			<center> <i class="fa fa-envelope-o"></i> <label onclick="showForm()" style="color: white">view messages</label></center>
+			</div>
+
+			<div class="col-md-9">
+				</br>
+				<center> <i class="fa fa-edit fa-2x"></i> <label class="postTitle">Posts</label> </br> </br>
+						<form action="">
+					    	<input type="text" id="writePost" class="writePost" id="writePost"  placeholder="Write your post" required>   </br></br>
+					    	<button type="submit" class="postBtn" onclick="post()"> Post </button>   	<input type="file" class="photoBtn" id="photoBtn">
+					    </form>
+
+				<div class="post" id="post">
+					</br>
+					<textarea class="postTxt" name="postTxt"></textarea>  
+					</br>
+					    <a class="clicks" id="clicks" style="color: white">0</a>
+				        <button type="button" class="like" name="like" onClick="like()">Like</button>
+				        <button type="button" class="comment" name="comment" onClick="comment()">Comment</button> 
+				        <button type="button" class="startchat" name="startchat" onClick="showForm()"> Start chat </button> </br> </br>
+				        <input type="text" id ="commentWrite" class="commentWrite">
+				        <button type="button" class="doneBtn" id="doneBtn" onClick="postComment()">Done</button>
+				</center>
+				</div>
+
+
+
+				</center>
+
+			</div>
+			
+	
+		
+		</div>
+	</div>
+	
+
+	<div class="chat-popup" id="myForm">
+  <form action="/action_page.php" class="form-container">
+    <h6 style="color: white">Messages</h6>
+    <textarea name="chat" style="background-color: #202630" ></textarea>
+    	<input type="text" name="msg" class="msg"  placeholder="Type your message" required>   
+
+</br> </br>
+    <button type="button" class="btn">Send</button>
+    <button type="button" class="btn cancel" onClick="closeForm()">Close</button>
+  </form>
+</div>
+
+<script>
+	    var clicks = 0;
+
+		function showForm() {
+		document.getElementById("myForm").style.visibility="visible";
+	}
+
+     function closeForm() {
+  	document.getElementById("myForm").style.visibility = "hidden";
+	}
+
+    function like() {
+        clicks += 1;
+        document.getElementById("clicks").innerHTML = clicks;
+    }
+
+    function comment(){
+    	document.getElementById("commentWrite").style.visibility="visible";
+    	document.getElementById("doneBtn").style.visibility="visible";
+
+    }
+
+    function postComment(){
+		var para = document.createElement("p");
+		var node = document.createTextNode(document.getElementById("commentWrite").value);
+		para.appendChild(node);
+		para.style.color="white";
+		var element = document.getElementById("post");
+		element.appendChild(para);
+
+    }
+    
+
+    function post(){
+    	var para = document.getElementById("writePost").value;
+    	var filePath=$('#photoBtn').val();
+		var filename = filePath.match(/[^\\/]*$/)[0];
+		var func="test";
+		$.ajax({
+            
+            method: "post",
+            url: "Homepage.php?action=test",
+            data: {function:func, paragraph:para , file:filename }
+        });
+
+		/*
+		var src="Homepage.php";
+		src += "?para=" + para;
+		src += "&filename=" + filename;
+		src = encodeURI(src);
+		window.location.href = src;
+		 $.ajax({
+            url:"Homepage.php",    //the page containing php script
+            type: "post",    //request type,
+            dataType: 'json',
+            data: {registration: "success", name: "xyz", email: "abc@gmail.com"},
+            success:function(result){
+                console.log(result.abc);
+            }
+        });
+        */
+    }
+
+
+</script>
+	<!-- Optional JavaScript -->
+	<!-- jQuery first, then Popper.js, then Bootstrap JS -->
+	<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+	<script type="text/javascript" src="jquery-3.5.1.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+<!--		<script src="js/jquery-3.5.1.min.js"></script>
+	<script src="js/bootstrap.min.js"></script></body>-->
+</html>
